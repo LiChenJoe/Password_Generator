@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="title">
+          <h1>Generate a</h1>
+          <h1>random password</h1>
+        </div>
+        <p>Never use an insecure password again.</p>
+        <form
+          class="generationArea"
+          action="javascript:;"
+          onsubmit="generate()"
+        >
+          <div class="setLength">
+            <h6>Password Length</h6>
+            <input
+              type="number"
+              value="16"
+              id="passwordLength"
+              min="1"
+              max="16"
+            />
+          </div>
+          <div class="charOption">
+            <div class="numOption">
+              <input
+                type="checkbox"
+                name="hasNumbers"
+                id="hasNumbers"
+                checked
+              />
+              <label for="hasNumbers">Has Numbers</label>
+            </div>
+            <div class="symOption">
+              <input type="checkbox" name="hasSymbal" id="hasSymbal" checked />
+              <label for="hasSymbal">Has Symbal</label>
+            </div>
+          </div>
+          <input type="submit" id="generateButton" value="Generate passwords" />
+        </form>
+        <hr class="solid" />
+        <div class="result">
+          <div class="option optionOne"></div>
+          <div class="option optionTwo"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Scrimba solo
+      <a
+        href="https://scrimba.com/learn/learnjavascript/solo-project-password-generator-cR9B46Sg"
+        >Project</a
+      >
+      /
+      <a
+        href="https://www.figma.com/file/NEj9JDycMjF3XKXq7swoc9/Random-Password-Generator-(New-version)"
+        >Design</a
+      >
+      / <a href="https://github.com/LiChenJoe">Creator</a>
+    </footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

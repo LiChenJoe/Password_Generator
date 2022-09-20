@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1C1C1C;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 550px;
+    height: 550px;
+    background-color: #1F2937;
+}
+
+
+.title {
+    padding-top: 85px;
+    margin-left: 52px;
+}
+
+h1 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: -0.025em;
+}
+
+h1:nth-child(1) {
+    color: white;
+}
+h1:nth-child(2) {
+    color: #4ADF86;
+}
+
+p {
+    font-weight:400 ;
+    margin-left: 52px;
+    color: #D5D4D8;
+}
+
+.generationArea {
+    margin-top: 51px;
+    width: 446px;
+    display: flex;
+    margin-left: 52px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h6, label {
+    color: #D5D4D8;
+}
+
+.charOption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+#passwordLength {
+    width: 100px;
+    text-align: center;
+    outline: none;
+}
+
+label {
+    font-size:  .83em;
+}
+
+#generateButton {
+    border: none;
+    width: 191px;
+    height: 42px;
+    background-color: #4ADF86;
+    color: white;
+    border-radius: 6px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+hr {
+    width: 446px;
+    margin-left: 52px;
+    margin-top: 30px;
+    border: 1px solid #2F3E53;
+  }
+
+.result {
+    display: flex;
+
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 211px;
+    height: 39px;
+    background-color: #273549;
+    border-radius: 6px;
+    margin-top: 39px;
+    color: #55F991;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: text;
+}
+
+.option:active{
+    cursor: copy;
+}
+
+.option:nth-child(1) {
+    margin-left: 52px;
+}
+
+.option:nth-child(2) {
+    margin-left: 24px;
+}
+
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: #4ADF86;
+}
