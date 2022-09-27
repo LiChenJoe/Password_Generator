@@ -9,7 +9,6 @@
 html, body{
     width: 100vw;
     height: 100vh;
-    background-color: #1C1C1C;
 }
 
 .container {
@@ -20,35 +19,124 @@ html, body{
     justify-content: center;
 }
 
+.darkModeContainer {
+    background-color: #1C1C1C;
+}
+
 .box {
     width: 550px;
     height: 550px;
-    background-color: #1F2937;
+    background-color:#ECFDF5;
+}
+
+.darkModeBox {
+    background-color:  #1F2937;
 }
 
 
+
+/* The switch - the box around the slider */
+.switch {
+    margin: 50px;
+    left: 410px;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
 .title {
-    padding-top: 85px;
     margin-left: 52px;
 }
 
 h1 {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     letter-spacing: -0.025em;
 }
 
-h1:nth-child(1) {
-    color: white;
+.tittleOne {
+    color: #2B283A;
 }
-h1:nth-child(2) {
+
+.darkModeTittleOne {
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.tittleTwo {
+    color: #10B981;
+}
+
+.darkModeTittleTwo {
     color: #4ADF86;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 p {
     font-weight:400 ;
     margin-left: 52px;
+    color: #6B7280;
+}
+
+
+.darkModePText {
     color: #D5D4D8;
 }
+
 
 .generationArea {
     margin-top: 51px;
@@ -60,8 +148,9 @@ p {
 }
 
 h6, label {
-    color: #D5D4D8;
+    color: #6B7280;
 }
+
 
 .charOption {
     display: flex;
@@ -95,9 +184,10 @@ label {
     width: 191px;
     height: 42px;
     background-color: #4ADF86;
-    color: white;
+    color: #FFFFFF;
     border-radius: 6px;
 }
+
 
 button:hover {
     cursor: pointer;
@@ -130,6 +220,8 @@ hr {
     cursor: text;
 }
 
+
+
 .option:active{
     cursor: copy;
 }
@@ -148,7 +240,7 @@ footer {
     position: absolute;
     bottom: 5px;
     text-align: center;
-    color: white;
+    color: #6B7280;
 }
 
 a {

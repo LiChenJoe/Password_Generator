@@ -4,7 +4,7 @@ const optionTwo = document.querySelector(".optionTwo");
 const passwordLength = document.querySelector("#passwordLength");
 const hasNumbers = document.querySelector("#hasNumbers");
 const hasSymbal = document.querySelector("#hasSymbal");
-52+29+10
+const darkModeCheckBox = document.querySelector("#darkModeCheckBox");
 
 function generate() {
     const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
@@ -75,5 +75,19 @@ function copyTwo() {
     navigator.clipboard.writeText(copyContentTwo);
 }
 
+function darkModeSwitch() {
+    document.querySelector(".container").classList.toggle("darkModeContainer");
+    document.querySelector(".box").classList.toggle("darkModeBox");
+    document.querySelector(".tittleOne").classList.toggle("darkModeTittleOne");
+    document.querySelector(".tittleTwo").classList.toggle("darkModeTittleTwo");
+    document.querySelector("p").classList.toggle("darkModePText");
+    document.querySelector("h6").classList.toggle("darkModePText");
+    document.querySelector(".numOption>label").classList.toggle("darkModePText");
+    document.querySelector(".symOption>label").classList.toggle("darkModePText"); 
+    document.querySelector("footer").classList.toggle("darkModePText"); 
+    
+}
+
 optionOne.addEventListener("click", copyOne);
 optionTwo.addEventListener("click", copyTwo);
+darkModeCheckBox.addEventListener("click", darkModeSwitch);
