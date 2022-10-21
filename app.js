@@ -22,9 +22,6 @@ function generate() {
     optionTwo.textContent="";
     let numbersCharacters = characters.slice(81);
     let symbolCharacters = characters.slice(52,81);
-    console.log(characters);
-    console.log(numbersCharacters);
-    console.log(symbolCharacters);
     if (!hasSymbal.checked && !hasNumbers.checked) {
         characters.slice(52);
         for(let i=0; i<passwordLength.value; i++) {
@@ -36,45 +33,29 @@ function generate() {
         for(let i=0; i<passwordLength.value; i++) {
             optionOne.textContent+= characters[Math.floor(Math.random()*62)];
             optionTwo.textContent+= characters[Math.floor(Math.random()*62)];
-        console.log(optionOne.textContent);
-        console.log(optionTwo.textContent);
         }
-        console.log(typeof optionOne.textContent);
-        console.log(!checkNumbers(optionOne.textContent));
         if (!checkNumbers(optionOne.textContent)){
             optionOne.textContent=optionOne.textContent.slice(0,-1);
-            console.log(optionOne.textContent, "before");
             optionOne.textContent+=numbersCharacters[Math.floor(Math.random()*10)];
-            console.log(optionOne.textContent, "after");
         }
          if (!checkNumbers(optionTwo.textContent)){
             optionTwo.textContent=optionTwo.textContent.slice(0,-1);
-            console.log(optionTwo.textContent, "before");
             optionTwo.textContent+=numbersCharacters[Math.floor(Math.random()*10)];
-            console.log(optionTwo.textContent, "after");
         } 
-        console.log("Here2");
     } else if (!hasNumbers.checked) {
         characters.splice(81);
         for(let i=0; i<passwordLength.value; i++) {
             optionOne.textContent+= characters[Math.floor(Math.random()*81)];
             optionTwo.textContent+= characters[Math.floor(Math.random()*81)];
         }
-        console.log(optionOne.textContent);
-        console.log(optionTwo.textContent);
         if (!checkSymbol(optionOne.textContent)){
             optionOne.textContent=optionOne.textContent.slice(0,-1);
-            console.log(optionOne.textContent, "before");
             optionOne.textContent+=symbolCharacters[Math.floor(Math.random()*29)];
-            console.log(optionOne.textContent, "after");
         }
          if (!checkSymbol(optionTwo.textContent)){
             optionTwo.textContent=optionTwo.textContent.slice(0,-1);
-            console.log(optionTwo.textContent, "before");
             optionTwo.textContent+=symbolCharacters[Math.floor(Math.random()*29)];
-            console.log(optionTwo.textContent, "after");
         } 
-    console.log("Here3");
     } else {
         for(let i=0; i<passwordLength.value; i++) {
             optionOne.textContent+= characters[Math.floor(Math.random()*91)];
@@ -82,54 +63,34 @@ function generate() {
         }
         if (!checkSymbol(optionOne.textContent) && !checkNumbers(optionOne.textContent)){
             optionOne.textContent=optionOne.textContent.slice(1);
-            console.log(optionOne.textContent, "before");
             optionOne.textContent+=symbolCharacters[Math.floor(Math.random()*29)];
-            console.log(optionOne.textContent, "after");
             optionOne.textContent=optionOne.textContent.slice(0,-1);
-            console.log(optionOne.textContent, "before");
             optionOne.textContent+=numbersCharacters[Math.floor(Math.random()*10)];
-            console.log(optionOne.textContent, "after");
         }
          if (!checkSymbol(optionTwo.textContent) && !checkNumbers(optionTwo.textContent)){
             optionTwo.textContent=optionTwo.textContent.slice(1);
-            console.log(optionTwo.textContent, "before");
             optionTwo.textContent+=symbolCharacters[Math.floor(Math.random()*29)];
-            console.log(optionTwo.textContent, "after");
             optionTwo.textContent=optionTwo.textContent.slice(0,-1);
-            console.log(optionTwo.textContent, "before");
             optionTwo.textContent+=numbersCharacters[Math.floor(Math.random()*10)];
-            console.log(optionTwo.textContent, "after");
         } 
         if (!checkNumbers(optionOne.textContent)){
             optionOne.textContent=optionOne.textContent.slice(0,-1);
-            console.log(optionOne.textContent, "before");
             optionOne.textContent+=numbersCharacters[Math.floor(Math.random()*10)];
-            console.log(optionOne.textContent, "after");
         }
          if (!checkNumbers(optionTwo.textContent)){
             optionTwo.textContent=optionTwo.textContent.slice(0,-1);
-            console.log(optionTwo.textContent, "before");
             optionTwo.textContent+=numbersCharacters[Math.floor(Math.random()*10)];
-            console.log(optionTwo.textContent, "after");
         } 
         if (!checkSymbol(optionOne.textContent)){
             optionOne.textContent=optionOne.textContent.slice(1);
-            console.log(optionOne.textContent, "before");
             optionOne.textContent+=symbolCharacters[Math.floor(Math.random()*29)];
-            console.log(optionOne.textContent, "after");
         }
          if (!checkSymbol(optionTwo.textContent)){
             optionTwo.textContent=optionTwo.textContent.slice(1);
-            console.log(optionTwo.textContent, "before");
             optionTwo.textContent+=symbolCharacters[Math.floor(Math.random()*29)];
-            console.log(optionTwo.textContent, "after");
         } 
-    console.log("Here4");
     }
-    console.log(optionOne.textContent=== optionTwo.textContent);
     if (optionOne.textContent=== optionTwo.textContent){
-        console.log(optionOne.textContent=== optionTwo.textContent);
-        console.log("Ah ha")
         optionTwo.textContent="";
         if (!hasSymbal.checked && !hasNumbers.checked) {
             for(let i=0; i<passwordLength.value; i++) {
@@ -153,9 +114,7 @@ function generate() {
                 
             }
         }
-        console.log("Here5");
     } 
-    console.log("Here6");
 
 }
 
